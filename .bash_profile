@@ -1,5 +1,6 @@
 # .bash_profile file
 # By Balaji S. Srinivasan (balajis@stanford.edu)
+# Edited by Gabriel Song (gabsong4@gmail.com)
 #
 # Concepts:
 # http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
@@ -50,6 +51,7 @@
 # Factor out all repeated profile initialization into .bashrc
 #  - All non-login shell parameters go there
 #  - All declarations repeated for each screen session go there
+
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi

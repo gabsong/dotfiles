@@ -1,15 +1,21 @@
 # .bashrc file
 # By Balaji S. Srinivasan (balajis@stanford.edu)
+# Edited by Gabriel Song (gabsong4@gmail.com)
 #
 # Concepts:
+# http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
 #
 #    1) .bashrc is the *non-login* config for bash, run in scripts and after
 #        first connection.
-#    2) .bash_profile is the *login* config for bash, launched upon first connection.
-#    3) .bash_profile imports .bashrc, but not vice versa.
-#    4) .bashrc imports .bashrc_custom, which can be used to override
-#        variables specified here.
-#           
+#
+#    2) .bash_profile is the *login* config for bash, launched upon first
+#        connection (in Ubuntu)
+#
+#    3) .bash_profile imports .bashrc in our script, but not vice versa.
+#
+#    4) .bashrc imports .bashrc_custom in our script, which can be used to
+#        override variables specified here.
+#
 # When using GNU screen:
 #
 #    1) .bash_profile is loaded the first time you login, and should be used
@@ -38,11 +44,10 @@
 #      --norc option. The --rcfile file option will force Bash to read and
 #      execute commands from file instead of ~/.bashrc.
 
+## -----------------------------------
+## -- 1.1) Set up umask permissions --
+## -----------------------------------
 
-
-# -----------------------------------
-# -- 1.1) Set up umask permissions --
-# -----------------------------------
 #  The following incantation allows easy group modification of files.
 #  See here: http://en.wikipedia.org/wiki/Umask
 #
@@ -192,7 +197,7 @@ alias treeacl='tree -A -C -L 2'
 alias em='emacs -nw'     # No X11 windows
 alias eqq='emacs -nw -Q' # No config and no X11
 export EDITOR='emacs -nw'
-export VISUAL='emacs -nw' 
+export VISUAL='emacs -nw'
 
 # 2.4) grep options
 export GREP_OPTIONS='--color=auto'
